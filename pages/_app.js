@@ -1,4 +1,5 @@
 import App from 'next/app'
+import Head from 'next/head'
 import React from 'react'
 import * as palx from 'palx'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -7,7 +8,8 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components'
 
 const theme = {
   colors: palx('#1DB954'),
-  space: [0, 6, 12, 18, 24, 36, 72, 108, 144, 288, 432]
+  space: [0, 6, 12, 18, 24, 36, 72, 108, 144, 288, 432],
+  breakpoints: ['40em', '52em', '64em']
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -26,8 +28,10 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
-          <head>
-          </head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
+          <Head>
+
+          </Head>
           <GlobalStyle />
           <Component {...pageProps} />
           <link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />

@@ -1,20 +1,32 @@
 {
-  "name": "with-styled-components",
+  "name": "seethemusic",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon -w server.js server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-brands-svg-icons": "^5.10.2",
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@zeit/next-css": "^1.0.1",
+    "connect-redis": "^4.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "mongoose": "^5.6.13",
+    "nanoid": "^2.1.0",
     "next": "latest",
+    "nodemon": "^1.19.2",
     "palx": "^1.0.3",
     "react": "^16.7.0",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.7.0",
+    "react-toastify": "^5.3.2",
+    "react-twitter-share-link": "^1.2.1",
+    "redis": "^2.8.0",
+    "spotify-web-api-node": "^4.0.0",
     "styled-components": "^4.0.0",
     "styled-system": "^5.1.1"
   },
